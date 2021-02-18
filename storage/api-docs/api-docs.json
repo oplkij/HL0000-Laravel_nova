@@ -1,0 +1,36 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "L5 OpenApi",
+        "description": "L5 Swagger OpenApi description",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/getPost": {
+            "get": {
+                "tags": [
+                    "Event Schedule"
+                ],
+                "summary": "Add a new post to the store",
+                "operationId": "getpost",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Tags to filter by",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        }
+    }
+}
